@@ -1,0 +1,23 @@
+-Print list of all books
+-Get a particular book using his id
+-Print the information of a particular book
+-Add a book to the system
+-Remove a book from the system
+-Add a user and remove a user
+-Borrow a book and change his status
+
+
+***Classes
+  -Book class
+   1)
+             |---Student
+  -User class
+             |---Admin
+  -Library class
+    1)getBook(book_id)
+    2)addBook(Book obj)
+    3)borrowBook(book_id)
+    4)getInfo(book_id)
+    5)getAllBooks()
+    6)removeBook()
+    7)

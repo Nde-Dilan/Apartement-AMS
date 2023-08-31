@@ -1,0 +1,21 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+	<qresource>
+	<file>icons/today.png</file>
+	<file>icons/books.png</file>
+	<file>icons/settings.png</file>
+	<file>icons/users.png</file>
+		<file>icons/themes.png</file>
+		<file>icons/house.png</file>
+		<file>icons/tenant.png</file>
+		<file>icons/tenant1.png</file>
+		<file>icons/email.png</file>
+		<file>icons/room.jpeg</file>
+		<file>icons/house.jpeg</file>
+		<file>icons/room1.jpeg</file>
+		<file>icons/room2.jpeg</file>
+		<file>icons/room3.jpeg</file>
+		<file>icons/room4.jpeg</file>
+   </qresource>
+
+</RCC>
