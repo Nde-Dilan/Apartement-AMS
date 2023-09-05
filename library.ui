@@ -30,7 +30,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
@@ -58,7 +58,7 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>0</y>
+           <y>-130</y>
            <width>773</width>
            <height>542</height>
           </rect>
@@ -145,7 +145,7 @@
                   <string>Status</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="pushButton">
+                <widget class="QPushButton" name="view_tenant_btn">
                  <property name="geometry">
                   <rect>
                    <x>40</x>
@@ -284,7 +284,7 @@ color:wheat;</string>
                   <string>Status</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="pushButton_2">
+                <widget class="QPushButton" name="view_tenant_btn_2">
                  <property name="geometry">
                   <rect>
                    <x>40</x>
@@ -423,7 +423,7 @@ color:wheat;</string>
                   <string>Status</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="pushButton_4">
+                <widget class="QPushButton" name="view_tenant_btn_3">
                  <property name="geometry">
                   <rect>
                    <x>40</x>
@@ -562,7 +562,7 @@ color:wheat;</string>
                   <string>Status</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="pushButton_3">
+                <widget class="QPushButton" name="view_tenant_btn_4">
                  <property name="geometry">
                   <rect>
                    <x>40</x>
@@ -701,7 +701,7 @@ color:wheat;</string>
                   <string>Status</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="pushButton_7">
+                <widget class="QPushButton" name="view_tenant_btn_5">
                  <property name="geometry">
                   <rect>
                    <x>40</x>
@@ -831,7 +831,7 @@ color:wheat;</string>
                   <string>Status</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="pushButton_10">
+                <widget class="QPushButton" name="view_tenant_btn_6">
                  <property name="geometry">
                   <rect>
                    <x>40</x>
@@ -970,7 +970,7 @@ color:wheat;</string>
                   <string>Status</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="pushButton_11">
+                <widget class="QPushButton" name="view_tenant_btn_7">
                  <property name="geometry">
                   <rect>
                    <x>40</x>
@@ -1109,7 +1109,7 @@ color:wheat;</string>
                   <string>Status</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="pushButton_12">
+                <widget class="QPushButton" name="view_tenant_btn_8">
                  <property name="geometry">
                   <rect>
                    <x>40</x>
@@ -1248,7 +1248,7 @@ color:wheat;</string>
                   <string>Status</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="pushButton_13">
+                <widget class="QPushButton" name="view_tenant_btn_9">
                  <property name="geometry">
                   <rect>
                    <x>40</x>
@@ -1387,7 +1387,7 @@ color:wheat;</string>
                   <string>Status</string>
                  </property>
                 </widget>
-                <widget class="QPushButton" name="pushButton_14">
+                <widget class="QPushButton" name="view_tenant_btn_10">
                  <property name="geometry">
                   <rect>
                    <x>40</x>
@@ -2877,7 +2877,7 @@ background-color:white;
  <resources>
   <include location="icons.qrc"/>
   <include location="icons.qrc"/>
-  <include location="../../../../PycharmProjects/Apartement-AMS/icons.qrc"/>
+  <include location="icons.qrc"/>
  </resources>
  <connections/>
 </ui>

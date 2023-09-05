@@ -33,7 +33,9 @@ class MainApp(QMainWindow, ui):
     def handle_buttons(self):
         self.dayBtn.clicked.connect(self.open_day_to_day_tab)
         self.themeBtn.clicked.connect(toggle_theme)
-
+        view_tenant_btns = [self.view_tenant_btn,self.view_tenant_btn_2,self.view_tenant_btn_3,self.view_tenant_btn_4,self.view_tenant_btn_5,self.view_tenant_btn_6,self.view_tenant_btn_7,self.view_tenant_btn_8,self.view_tenant_btn_9,self.view_tenant_btn_10]
+        for view_tenant in view_tenant_btns:
+            view_tenant.clicked.connect(self.open_tenant_view)
         self.bookBtn.clicked.connect(self.open_books_tab)
         self.userBtn.clicked.connect(self.open_users_tab)
         self.settingBtn.clicked.connect(self.open_settings_tab)
@@ -94,6 +96,8 @@ class MainApp(QMainWindow, ui):
 
         QMessageBox.Information(self, "Info", "Email sent successfully!", QMessageBox.Ok)
 
+    def open_tenant_view(self):
+        self.open_books_tab()
     #####################################################
     ############### user operations ######################
 
@@ -230,8 +234,8 @@ def main():
 
 
 if __name__ == '__main__':
-    login_=main_login()
-    if login_:
+    # login_=main_login()
+    if True:
         main()
     else:
         pass

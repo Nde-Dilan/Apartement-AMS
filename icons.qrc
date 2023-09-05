@@ -16,6 +16,8 @@
 		<file>icons/room2.jpeg</file>
 		<file>icons/room3.jpeg</file>
 		<file>icons/room4.jpeg</file>
+		<file>icons/clent.png</file>
+		<file>icons/clent1.png</file>
    </qresource>
 
 </RCC>
