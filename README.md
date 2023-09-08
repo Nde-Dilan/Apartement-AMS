@@ -2,6 +2,9 @@
 
 ### Welcome to the Apartment Management Application, a desktop GUI application built using tkinter/PyQt6/PySide6. This application is designed to assist in managing an apartment building with a minimum of 20 rooms that are available for rent. It offers various functionalities to help you keep track of tenant information, room status, bills, and tenant statistics.
 
+![Screenshot 1](https://github.com/Nde-Dilan/Apartement-AMS/blob/main/AMS/Capture%20d'%C3%A9cran%202023-09-08%20051124.png)
+![Screenshot 2](https://github.com/Nde-Dilan/Apartement-AMS/blob/main/AMS/Capture%20d'%C3%A9cran%202023-09-08%20051341.png)
+
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
@@ -12,6 +15,7 @@
 
 ## Features
 - **User-friendly Interface**: Provides an intuitive graphical interface for easy interaction.
+![Screenshot 1](https://github.com/Nde-Dilan/Apartement-AMS/blob/main/AMS/Capture%20d'%C3%A9cran%202023-09-08%20051144.png)
 - **Tenant Information**: Allows users to input tenant details, including name, apartment number, bills, and current debt, while also tracking the duration of their stay.
 - **Room Status**: Displays room status, including occupied, vacant, and rooms needing repair.
 - **Bill Reminders**: Sends email reminders to tenants for rent, water, and light bills.
@@ -50,8 +54,8 @@ To use the Apartment Management Application, follow these instructions:
 
 ### Screenshots
 
-![Screenshot 1](<Insert_Screenshot_1_Link>)
-![Screenshot 2](<Insert_Screenshot_2_Link>)
+![Screenshot 1](https://github.com/Nde-Dilan/Apartement-AMS/blob/main/AMS/Capture%20d'%C3%A9cran%202023-09-08%20051246.png)
+![Screenshot 2](https://github.com/Nde-Dilan/Apartement-AMS/blob/main/AMS/Capture%20d'%C3%A9cran%202023-09-08%20051219.png)
 
 ## Contributing
 
@@ -60,5 +64,8 @@ Contributions to this project are welcome! If you have any ideas, bug fixes, or 
 ## License
 
 This project is licensed under the MIT License.
+
+![Screenshot 3](https://github.com/Nde-Dilan/Apartement-AMS/blob/main/AMS/Capture%20d'%C3%A9cran%202023-09-08%20051420.png)
+
 
 ---
