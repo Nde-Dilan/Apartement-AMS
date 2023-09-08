@@ -16,8 +16,18 @@
 		<file>icons/room2.jpeg</file>
 		<file>icons/room3.jpeg</file>
 		<file>icons/room4.jpeg</file>
-		<file>icons/clent.png</file>
-		<file>icons/clent1.png</file>
+		<file>icons/client.png</file>
+		<file>icons/client1.png</file>
+		<file>icons/client128.png</file>
+		<file>icons/client2.png</file>
+		<file>icons/client1.jpeg</file>
+		<file>icons/client.jpeg</file>
+		<file>icons/room5.jpeg</file>
+		<file>icons/room6.jpeg</file>
+		<file>icons/room7.jpeg</file>
+		<file>icons/room8.jpeg</file>
+		<file>icons/room9.jpeg</file>
+		<file>icons/house1.jpeg</file>
    </qresource>
 
 </RCC>

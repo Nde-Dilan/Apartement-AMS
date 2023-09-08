@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>822</width>
-    <height>612</height>
+    <height>643</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,6 +15,106 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
+    <item row="3" column="0">
+     <widget class="QPushButton" name="settingBtn">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;Send an email&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="icons.qrc">
+        <normaloff>:/icons/email.png</normaloff>:/icons/email.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="themeBtn">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Toggle dark/light theme&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../../Downloads/theme.png</normaloff>../../Downloads/theme.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="userBtn">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Add new tenant&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="icons.qrc">
+        <normaloff>:/icons/tenant.png</normaloff>:/icons/tenant.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="bookBtn">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;View tenant details&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="icons.qrc">
+        <normaloff>:/icons/tenant1.png</normaloff>:/icons/tenant1.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QPushButton" name="dayBtn">
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;View all rooms&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="icons.qrc">
+        <normaloff>:/icons/house.png</normaloff>:/icons/house.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+    </item>
     <item row="0" column="1" rowspan="5">
      <widget class="QTabWidget" name="tabWidget">
       <property name="sizePolicy">
@@ -42,7 +142,7 @@
           <x>0</x>
           <y>0</y>
           <width>731</width>
-          <height>431</height>
+          <height>421</height>
          </rect>
         </property>
         <property name="verticalScrollBarPolicy">
@@ -58,7 +158,7 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>-130</y>
+           <y>-140</y>
            <width>773</width>
            <height>542</height>
           </rect>
@@ -231,7 +331,7 @@ color:wheat;</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="icons.qrc">:/icons/room4.jpeg</pixmap>
+                 <pixmap resource="icons.qrc">:/icons/room1.jpeg</pixmap>
                 </property>
                </widget>
               </item>
@@ -268,7 +368,7 @@ color:wheat;</string>
                   </rect>
                  </property>
                  <property name="text">
-                  <string>Room 1</string>
+                  <string>Room 2</string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_42">
@@ -370,7 +470,7 @@ color:wheat;</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="icons.qrc">:/icons/room4.jpeg</pixmap>
+                 <pixmap resource="icons.qrc">:/icons/room6.jpeg</pixmap>
                 </property>
                </widget>
               </item>
@@ -407,7 +507,7 @@ color:wheat;</string>
                   </rect>
                  </property>
                  <property name="text">
-                  <string>Room 1</string>
+                  <string>Room 3</string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_57">
@@ -509,7 +609,7 @@ color:wheat;</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="icons.qrc">:/icons/room4.jpeg</pixmap>
+                 <pixmap resource="icons.qrc">:/icons/room3.jpeg</pixmap>
                 </property>
                </widget>
               </item>
@@ -546,7 +646,7 @@ color:wheat;</string>
                   </rect>
                  </property>
                  <property name="text">
-                  <string>Room 1</string>
+                  <string>Room 4</string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_51">
@@ -648,7 +748,7 @@ color:wheat;</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="icons.qrc">:/icons/room4.jpeg</pixmap>
+                 <pixmap resource="icons.qrc">:/icons/room8.jpeg</pixmap>
                 </property>
                </widget>
               </item>
@@ -685,7 +785,7 @@ color:wheat;</string>
                   </rect>
                  </property>
                  <property name="text">
-                  <string>Room 1</string>
+                  <string>Room 5</string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_60">
@@ -778,7 +878,7 @@ color:wheat;</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="icons.qrc">:/icons/room4.jpeg</pixmap>
+                 <pixmap resource="icons.qrc">:/icons/house1.jpeg</pixmap>
                 </property>
                </widget>
               </item>
@@ -815,7 +915,7 @@ color:wheat;</string>
                   </rect>
                  </property>
                  <property name="text">
-                  <string>Room 1</string>
+                  <string>Room 6</string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_67">
@@ -917,7 +1017,7 @@ color:wheat;</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="icons.qrc">:/icons/room4.jpeg</pixmap>
+                 <pixmap resource="icons.qrc">:/icons/room.jpeg</pixmap>
                 </property>
                </widget>
               </item>
@@ -954,7 +1054,7 @@ color:wheat;</string>
                   </rect>
                  </property>
                  <property name="text">
-                  <string>Room 1</string>
+                  <string>Room 7</string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_70">
@@ -1056,7 +1156,7 @@ color:wheat;</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="icons.qrc">:/icons/room4.jpeg</pixmap>
+                 <pixmap resource="icons.qrc">:/icons/room9.jpeg</pixmap>
                 </property>
                </widget>
               </item>
@@ -1093,7 +1193,7 @@ color:wheat;</string>
                   </rect>
                  </property>
                  <property name="text">
-                  <string>Room 1</string>
+                  <string>Room 8</string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_73">
@@ -1195,7 +1295,7 @@ color:wheat;</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="icons.qrc">:/icons/room4.jpeg</pixmap>
+                 <pixmap resource="icons.qrc">:/icons/room7.jpeg</pixmap>
                 </property>
                </widget>
               </item>
@@ -1232,7 +1332,7 @@ color:wheat;</string>
                   </rect>
                  </property>
                  <property name="text">
-                  <string>Room 1</string>
+                  <string>Room 8</string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_76">
@@ -1334,7 +1434,7 @@ color:wheat;</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap resource="icons.qrc">:/icons/room4.jpeg</pixmap>
+                 <pixmap resource="icons.qrc">:/icons/room2.jpeg</pixmap>
                 </property>
                </widget>
               </item>
@@ -1371,7 +1471,7 @@ color:wheat;</string>
                   </rect>
                  </property>
                  <property name="text">
-                  <string>Room 1</string>
+                  <string>Room 9</string>
                  </property>
                 </widget>
                 <widget class="QLabel" name="label_79">
@@ -1457,111 +1557,38 @@ color:wheat;</string>
          <enum>QTabWidget::North</enum>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="tab_5">
          <attribute name="title">
-          <string>Add new book</string>
+          <string>Tenant information</string>
          </attribute>
-         <widget class="QLineEdit" name="book_title">
-          <property name="geometry">
-           <rect>
-            <x>132</x>
-            <y>20</y>
-            <width>221</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="placeholderText">
-           <string>3 Ways to survive in a ruined world</string>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="book_author">
-          <property name="geometry">
-           <rect>
-            <x>130</x>
-            <y>70</y>
-            <width>121</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="placeholderText">
-           <string>Sung sing</string>
-          </property>
-         </widget>
          <widget class="QTextEdit" name="description">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
           <property name="geometry">
            <rect>
-            <x>10</x>
-            <y>140</y>
-            <width>361</width>
+            <x>0</x>
+            <y>170</y>
+            <width>661</width>
             <height>141</height>
            </rect>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
           </property>
           <property name="placeholderText">
            <string>Lorem ipsum dolor sit amet, consectetur adipisim dolor sit amet, consectetur adipisicing elit. Ad aliquid as bhge gehgdghfgh gla b  ghed deb fe eeee eedee ee ee e orucing elit. Ad aliquid assumenda consectetur, dolores magnam modi mollitia neque nisi nostrum quam ratione reprehenderit repudiandae saepe soluta totam. Accusantium atque autem corporis eaque eos facere hic, illum inventore ipsum iusto laborum numquam obcaecati officia, reiciendis sapiente tempore voluptate. Enim officia qui sint....</string>
           </property>
          </widget>
-         <widget class="QComboBox" name="category_combo">
+         <widget class="QPushButton" name="backBtn">
           <property name="geometry">
            <rect>
-            <x>510</x>
-            <y>140</y>
-            <width>151</width>
-            <height>22</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="available_combo">
-          <property name="geometry">
-           <rect>
-            <x>510</x>
-            <y>190</y>
-            <width>151</width>
-            <height>22</height>
-           </rect>
-          </property>
-          <item>
-           <property name="text">
-            <string>True</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>False</string>
-           </property>
-          </item>
-         </widget>
-         <widget class="QComboBox" name="language_combo">
-          <property name="geometry">
-           <rect>
-            <x>510</x>
-            <y>230</y>
-            <width>151</width>
-            <height>22</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="pages">
-          <property name="geometry">
-           <rect>
-            <x>500</x>
-            <y>70</y>
-            <width>111</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="placeholderText">
-           <string>3314</string>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="saveBtn">
-          <property name="geometry">
-           <rect>
-            <x>270</x>
-            <y>340</y>
-            <width>141</width>
-            <height>51</height>
+            <x>150</x>
+            <y>350</y>
+            <width>91</width>
+            <height>41</height>
            </rect>
           </property>
           <property name="font">
@@ -1571,130 +1598,93 @@ color:wheat;</string>
            </font>
           </property>
           <property name="text">
-           <string>Save</string>
+           <string>Back</string>
           </property>
          </widget>
-         <widget class="QLabel" name="label_3">
+         <widget class="QPushButton" name="send_email">
           <property name="geometry">
            <rect>
-            <x>10</x>
-            <y>20</y>
-            <width>81</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Book title</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_4">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>70</y>
-            <width>81</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Book author</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_5">
-          <property name="geometry">
-           <rect>
-            <x>350</x>
-            <y>70</y>
+            <x>320</x>
+            <y>350</y>
             <width>111</width>
-            <height>31</height>
+            <height>41</height>
            </rect>
           </property>
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <pointsize>12</pointsize>
             <bold>true</bold>
            </font>
           </property>
           <property name="text">
-           <string>Number of pages</string>
+           <string>Send email</string>
           </property>
          </widget>
-         <widget class="QLabel" name="label_6">
+         <widget class="QLabel" name="label">
           <property name="geometry">
            <rect>
-            <x>390</x>
-            <y>140</y>
-            <width>111</width>
+            <x>-2</x>
+            <y>0</y>
+            <width>261</width>
+            <height>161</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="icons.qrc">:/icons/client1.jpeg</pixmap>
+          </property>
+         </widget>
+         <widget class="QLabel" name="name_label">
+          <property name="geometry">
+           <rect>
+            <x>280</x>
+            <y>10</y>
+            <width>131</width>
             <height>31</height>
            </rect>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
           <property name="text">
-           <string>Book Category</string>
+           <string>Name:</string>
           </property>
          </widget>
-         <widget class="QLabel" name="label_7">
+         <widget class="QPushButton" name="seeTheGraph">
           <property name="geometry">
            <rect>
-            <x>410</x>
-            <y>190</y>
-            <width>71</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>Available</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_27">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
+            <x>280</x>
             <y>110</y>
-            <width>111</width>
-            <height>31</height>
+            <width>91</width>
+            <height>41</height>
            </rect>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
           <property name="text">
-           <string>Book description </string>
+           <string>See the graph</string>
           </property>
          </widget>
-         <widget class="QLabel" name="label_28">
+         <widget class="QLabel" name="email_label">
           <property name="geometry">
            <rect>
-            <x>410</x>
-            <y>230</y>
-            <width>81</width>
+            <x>280</x>
+            <y>60</y>
+            <width>131</width>
             <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Email :</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="reliability">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>480</x>
+            <y>110</y>
+            <width>91</width>
+            <height>41</height>
            </rect>
           </property>
           <property name="font">
@@ -1704,13 +1694,13 @@ color:wheat;</string>
            </font>
           </property>
           <property name="text">
-           <string>Language(s)</string>
+           <string>reliability</string>
           </property>
          </widget>
         </widget>
         <widget class="QWidget" name="tab_6">
          <attribute name="title">
-          <string>Edit or Delete a book</string>
+          <string>Edit or Delete a Tenant</string>
          </attribute>
          <widget class="QLabel" name="label_8">
           <property name="geometry">
@@ -2435,8 +2425,8 @@ color:wheat;</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>671</width>
-          <height>511</height>
+          <width>721</width>
+          <height>451</height>
          </rect>
         </property>
         <property name="toolTip">
@@ -2452,8 +2442,8 @@ color:wheat;</string>
          <widget class="QLabel" name="label_24">
           <property name="geometry">
            <rect>
-            <x>350</x>
-            <y>120</y>
+            <x>340</x>
+            <y>70</y>
             <width>101</width>
             <height>31</height>
            </rect>
@@ -2476,9 +2466,9 @@ color:wheat;</string>
           <property name="geometry">
            <rect>
             <x>110</x>
-            <y>19</y>
+            <y>0</y>
             <width>431</width>
-            <height>71</height>
+            <height>61</height>
            </rect>
           </property>
           <property name="font">
@@ -2499,34 +2489,11 @@ color:wheat;</string>
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QPushButton" name="quitMailBtn">
-          <property name="geometry">
-           <rect>
-            <x>310</x>
-            <y>430</y>
-            <width>101</width>
-            <height>41</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color:black;
-background-color:white;</string>
-          </property>
-          <property name="text">
-           <string>Quit</string>
-          </property>
-         </widget>
          <widget class="QLineEdit" name="sender_email">
           <property name="geometry">
            <rect>
-            <x>180</x>
-            <y>120</y>
+            <x>170</x>
+            <y>70</y>
             <width>161</width>
             <height>31</height>
            </rect>
@@ -2535,35 +2502,11 @@ background-color:white;</string>
            <string notr="true">color:black;</string>
           </property>
          </widget>
-         <widget class="QPushButton" name="sendEmailBtn">
-          <property name="geometry">
-           <rect>
-            <x>150</x>
-            <y>430</y>
-            <width>101</width>
-            <height>41</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">color:black;
-background-color:white;
-</string>
-          </property>
-          <property name="text">
-           <string>Send</string>
-          </property>
-         </widget>
          <widget class="QLabel" name="label_29">
           <property name="geometry">
            <rect>
-            <x>40</x>
-            <y>120</y>
+            <x>30</x>
+            <y>70</y>
             <width>101</width>
             <height>31</height>
            </rect>
@@ -2585,8 +2528,8 @@ background-color:white;
          <widget class="QLabel" name="label_31">
           <property name="geometry">
            <rect>
-            <x>30</x>
-            <y>180</y>
+            <x>20</x>
+            <y>130</y>
             <width>121</width>
             <height>31</height>
            </rect>
@@ -2608,8 +2551,8 @@ background-color:white;
          <widget class="QLabel" name="label_32">
           <property name="geometry">
            <rect>
-            <x>360</x>
-            <y>170</y>
+            <x>350</x>
+            <y>120</y>
             <width>91</width>
             <height>31</height>
            </rect>
@@ -2631,8 +2574,8 @@ background-color:white;
          <widget class="QLineEdit" name="my_password">
           <property name="geometry">
            <rect>
-            <x>170</x>
-            <y>180</y>
+            <x>160</x>
+            <y>130</y>
             <width>151</width>
             <height>31</height>
            </rect>
@@ -2644,8 +2587,8 @@ background-color:white;
          <widget class="QLabel" name="label_33">
           <property name="geometry">
            <rect>
-            <x>30</x>
-            <y>220</y>
+            <x>10</x>
+            <y>170</y>
             <width>91</width>
             <height>31</height>
            </rect>
@@ -2668,7 +2611,7 @@ background-color:white;
           <property name="geometry">
            <rect>
             <x>30</x>
-            <y>260</y>
+            <y>200</y>
             <width>611</width>
             <height>151</height>
            </rect>
@@ -2683,53 +2626,23 @@ background-color:white;
          <widget class="QComboBox" name="emailCombo">
           <property name="geometry">
            <rect>
-            <x>480</x>
-            <y>121</y>
+            <x>470</x>
+            <y>71</y>
             <width>151</width>
             <height>31</height>
            </rect>
           </property>
           <item>
            <property name="text">
-            <string>Roman</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>History</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Novel</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Scientific</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Fantasy</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Drama</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Psychology</string>
+            <string>ndedilan504@gmail.com</string>
            </property>
           </item>
          </widget>
          <widget class="QComboBox" name="subjectCombo">
           <property name="geometry">
            <rect>
-            <x>480</x>
-            <y>171</y>
+            <x>470</x>
+            <y>121</y>
             <width>151</width>
             <height>31</height>
            </rect>
@@ -2755,109 +2668,56 @@ background-color:white;
            </property>
           </item>
          </widget>
+         <widget class="QPushButton" name="quitMailBtn_2">
+          <property name="geometry">
+           <rect>
+            <x>340</x>
+            <y>360</y>
+            <width>101</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;
+background-color:white;</string>
+          </property>
+          <property name="text">
+           <string>Quit</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="sendEmailBtn_2">
+          <property name="geometry">
+           <rect>
+            <x>130</x>
+            <y>360</y>
+            <width>101</width>
+            <height>41</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color:black;
+background-color:white;
+</string>
+          </property>
+          <property name="text">
+           <string>Send</string>
+          </property>
+         </widget>
         </widget>
        </widget>
       </widget>
-     </widget>
-    </item>
-    <item row="2" column="0">
-     <widget class="QPushButton" name="userBtn">
-      <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Add new tenant&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset resource="icons.qrc">
-        <normaloff>:/icons/tenant.png</normaloff>:/icons/tenant.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>40</width>
-        <height>40</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0">
-     <widget class="QPushButton" name="settingBtn">
-      <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;Send an email&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset resource="icons.qrc">
-        <normaloff>:/icons/email.png</normaloff>:/icons/email.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>40</width>
-        <height>40</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="0">
-     <widget class="QPushButton" name="themeBtn">
-      <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Toggle dark/light theme&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset>
-        <normaloff>../../Downloads/theme.png</normaloff>../../Downloads/theme.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>50</width>
-        <height>40</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QPushButton" name="dayBtn">
-      <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;View all rooms&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset resource="icons.qrc">
-        <normaloff>:/icons/house.png</normaloff>:/icons/house.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>40</width>
-        <height>40</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QPushButton" name="bookBtn">
-      <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;View tenant details&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="icon">
-       <iconset resource="icons.qrc">
-        <normaloff>:/icons/tenant1.png</normaloff>:/icons/tenant1.png</iconset>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>40</width>
-        <height>40</height>
-       </size>
-      </property>
      </widget>
     </item>
    </layout>
@@ -2877,7 +2737,7 @@ background-color:white;
  <resources>
   <include location="icons.qrc"/>
   <include location="icons.qrc"/>
-  <include location="icons.qrc"/>
+  <include location="../Library-LMS/icons.qrc"/>
  </resources>
  <connections/>
 </ui>

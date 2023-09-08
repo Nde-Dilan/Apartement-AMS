@@ -3,7 +3,9 @@ from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 import qdarktheme
 import sys
-#TODO :Make the scroll bar functional, test the send_mail functionality, design the db
+pass_key = "auavzkcycnhdmjmk"
+#TODO :Create a button to open a matplotlib graph out of the pyqt5 app
+# TODO: Reliability of a client
 #TODO :add a new tenant, make the combo box of the status readonly
 #TODO : Click on one room open the second tab with all the info of that room
 #TODO: Clean the code
@@ -14,9 +16,11 @@ import MySQLdb
 from PyQt5.uic import loadUiType
 
 ui, _ = loadUiType("library.ui")
+
 light = True
+tenant_id=0
 
-
+# draw_graph()
 class MainApp(QMainWindow, ui):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -27,43 +31,56 @@ class MainApp(QMainWindow, ui):
         self.show_emails()
         self.show_subjects()
 
+
     def handle_ui_changes(self):
         self.tabWidget.tabBar().setVisible(False)
 
     def handle_buttons(self):
-        self.dayBtn.clicked.connect(self.open_day_to_day_tab)
+        self.seeTheGraph.clicked.connect(self.draw_graph)
+        self.dayBtn.clicked.connect(self.open_tenants_tab)
         self.themeBtn.clicked.connect(toggle_theme)
-        view_tenant_btns = [self.view_tenant_btn,self.view_tenant_btn_2,self.view_tenant_btn_3,self.view_tenant_btn_4,self.view_tenant_btn_5,self.view_tenant_btn_6,self.view_tenant_btn_7,self.view_tenant_btn_8,self.view_tenant_btn_9,self.view_tenant_btn_10]
-        for view_tenant in view_tenant_btns:
-            view_tenant.clicked.connect(self.open_tenant_view)
-        self.bookBtn.clicked.connect(self.open_books_tab)
+        # view_tenant_btns = [self.view_tenant_btn,self.view_tenant_btn_2,self.view_tenant_btn_3,self.view_tenant_btn_4,self.view_tenant_btn_5,self.view_tenant_btn_6,self.view_tenant_btn_7,self.view_tenant_btn_8,self.view_tenant_btn_9,self.view_tenant_btn_10]
+        # for view_tenant in view_tenant_btns:
+        #     view_tenant.clicked.connect(lambda : self.open_tenant_view(view_tenant_btns.index(view_tenant)))
+        view_tenant_btns = [self.view_tenant_btn, self.view_tenant_btn_2, self.view_tenant_btn_3,
+                            self.view_tenant_btn_4, self.view_tenant_btn_5, self.view_tenant_btn_6,
+                            self.view_tenant_btn_7, self.view_tenant_btn_8, self.view_tenant_btn_9,
+                            self.view_tenant_btn_10]
+
+        [view_tenant.clicked.connect(lambda _, index=view_tenant_btns.index(view_tenant): self.open_tenant_view(index)) for view_tenant in view_tenant_btns]
+
+        self.bookBtn.clicked.connect(self.open_tenant_details)
         self.userBtn.clicked.connect(self.open_users_tab)
-        self.settingBtn.clicked.connect(self.open_settings_tab)
+        self.settingBtn.clicked.connect(self.open_email_tab)
+        self.send_email.clicked.connect(self.open_email_tab)
         # operations
         self.addUserBtn.clicked.connect(self.add_new_user)
         self.saveChangesUser.clicked.connect(self.update_user)
         self.loginBtn.clicked.connect(self.edit_user)
-        self.sendEmailBtn.clicked.connect(self.send_email)
+
+        self.sendEmailBtn_2.clicked.connect(self.send_email_func)
+        self.quitMailBtn_2.clicked.connect(self.open_tenants_tab)
+        self.backBtn.clicked.connect(self.open_tenants_tab)
 
     #####################################################
     ############### opening tabs ######################
 
-    def open_day_to_day_tab(self):
+    def open_tenants_tab(self):
         self.tabWidget.setCurrentIndex(0)
 
-    def open_books_tab(self):
+    def open_tenant_details(self):
         self.tabWidget.setCurrentIndex(1)
 
     def open_users_tab(self):
         self.tabWidget.setCurrentIndex(2)
 
-    def open_settings_tab(self):
+    def open_email_tab(self):
         self.tabWidget.setCurrentIndex(3)
 
 
     ##### Differents functionalities ######
 
-    def send_email(self):
+    def send_email_func(self):
         import smtplib
         from email.mime.multipart import MIMEMultipart
         from email.mime.text import MIMEText
@@ -72,8 +89,8 @@ class MainApp(QMainWindow, ui):
         # Email configuration
         sender_email = self.sender_email.text()
         sender_password = self.my_password.text()
-        recipient_email = self.recipient_email()
-        subject = self.subject.currentText()
+        recipient_email = self.emailCombo.currentText()
+        subject = self.subjectCombo.currentText()
         body = self.contentEmail.toPlainText()
 
         # SMTP server settings (for Gmail)
@@ -94,10 +111,88 @@ class MainApp(QMainWindow, ui):
             server.login(sender_email, sender_password)
             server.sendmail(sender_email, recipient_email, msg.as_string())
 
-        QMessageBox.Information(self, "Info", "Email sent successfully!", QMessageBox.Ok)
+        QMessageBox.information(self, "Info", "Email sent successfully!", QMessageBox.Ok)
 
-    def open_tenant_view(self):
-        self.open_books_tab()
+    def draw_graph(self):
+        self.db = MySQLdb.connect(host='localhost', user='root', password='123456789', db='apartement')
+        self.cursor = self.db.cursor()
+        import matplotlib.pyplot as plt
+
+        global tenant_id
+        room_id = tenant_id
+        self.cursor.execute('''
+                                           SELECT payement_history FROM tenants WHERE room_id = (%s)
+                                           ''', (room_id,))
+        data = self.cursor.fetchone()
+        print("data")
+        print(data)
+        import ast
+        payment_status = ast.literal_eval(data[0])
+
+        # Months (x-axis)
+        months = ["Month 1", "Month 2", "Month 3", "Month 4", "Month 5", "Month 6"]
+
+        # Create a bar graph
+        plt.bar(months, payment_status, color=['green' if status == 'Yes' else 'red' for status in payment_status])
+
+        # Set labels and title
+        plt.xlabel("Months")
+        plt.ylabel("Payment Status")
+        plt.title("Client Payment Status Over 6 Months")
+
+        # Display the graph
+        plt.show()
+
+    def is_reliable(self):
+
+        self.db = MySQLdb.connect(host='localhost', user='root', password='123456789', db='apartement')
+        self.cursor = self.db.cursor()
+
+        global tenant_id
+        room_id = tenant_id
+        self.cursor.execute('''
+                                                   SELECT payement_history FROM tenants WHERE room_id = (%s)
+                                                   ''', (room_id,))
+        payment_status = self.cursor.fetchone()
+        print(payment_status)
+        reliability_criteria = 5
+        import ast
+
+        # Calculate the client's reliability based on payment history
+        num_payments = ast.literal_eval(payment_status[0]).count("Yes")
+
+        # Make a determination
+        if num_payments >= reliability_criteria:
+            self.reliability.setText("Reliable")
+        else:
+            self.reliability.setText("Unreliable")
+
+
+
+    def open_tenant_view(self,id):
+        self.db = MySQLdb.connect(host='localhost', user='root', password='123456789', db='apartement')
+        self.cursor = self.db.cursor()
+        global tenant_id
+        tenant_id=id+1
+        room_id = id+1
+        self.is_reliable()
+        try:
+            data= self.cursor.execute('''
+                                   SELECT * FROM tenants WHERE room_id = (%s)
+                                   ''', (room_id,))
+
+
+        except Exception as e:
+            print(e)
+
+        data1 = self.cursor.fetchone()
+        print(data1)
+
+        self.name_label.setText("Name : "+data1[1])
+        self.email_label.setText("Email : "+data1[2])
+
+        # print(id)
+        self.open_tenant_details()
     #####################################################
     ############### user operations ######################
 
@@ -110,9 +205,9 @@ class MainApp(QMainWindow, ui):
         move_in = self.move_in.date().toString("yyyy-MM-dd")
 
         tenant = self.cursor.execute('''
-                       SELECT * FROM tenant WHERE name = (%s)
+                       SELECT * FROM tenants WHERE name = (%s)
                        ''', (username,))
-        print(tenant)
+        # print(tenant)
 
         if tenant:
             # open a dialog box to say that the username is already taken
@@ -120,7 +215,7 @@ class MainApp(QMainWindow, ui):
         else:
             if username and email :
                 self.cursor.execute('''
-                            INSERT INTO tenant (name, email, move_in)
+                            INSERT INTO tenants (name, email, move_in)
                             VALUES (%s, %s, %s)
                             ''', (username, email, move_in))
                 self.db.commit()
@@ -138,13 +233,13 @@ class MainApp(QMainWindow, ui):
         self.cursor = self.db.cursor()
 
         self.cursor.execute('''
-          SELECT email FROM Tenant
+          SELECT email FROM tenants
           ''')
 
         data = self.cursor.fetchall()
         for email in data:
             self.emailCombo.addItem(email[0])
-            print(email)
+            # print(email)
 
         self.db.commit()
         self.db.close()
@@ -157,10 +252,7 @@ class MainApp(QMainWindow, ui):
               ''')
 
         data = self.cursor.fetchall()
-        print(data)
-        for subject in data:
-            self.emailCombo.addItem(subject[0])
-            print(subject)
+
 
         self.db.commit()
         self.db.close()
@@ -173,7 +265,7 @@ class MainApp(QMainWindow, ui):
         email = self.email_2.text()
 
         self.cursor.execute('''
-                               SELECT * FROM tenant WHERE username = (%s) AND email= (%s)
+                               SELECT * FROM tenants WHERE username = (%s) AND email= (%s)
                                ''', (username, email,))
         tenant = self.cursor.fetchone()
         #print(user)
