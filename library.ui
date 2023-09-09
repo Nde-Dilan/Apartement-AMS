@@ -10,8 +10,24 @@
     <height>643</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>822</width>
+    <height>643</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>822</width>
+    <height>643</height>
+   </size>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>AMS-Application</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/icons/house.jpeg</normaloff>:/icons/house.jpeg</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -130,7 +146,7 @@
        </size>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
@@ -158,7 +174,7 @@
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>-140</y>
+           <y>0</y>
            <width>773</width>
            <height>542</height>
           </rect>
@@ -2083,7 +2099,7 @@ color:wheat;</string>
          <property name="geometry">
           <rect>
            <x>50</x>
-           <y>70</y>
+           <y>49</y>
            <width>81</width>
            <height>16</height>
           </rect>
@@ -2101,8 +2117,8 @@ color:wheat;</string>
         <widget class="QLabel" name="label_15">
          <property name="geometry">
           <rect>
-           <x>50</x>
-           <y>170</y>
+           <x>40</x>
+           <y>150</y>
            <width>81</width>
            <height>16</height>
           </rect>
@@ -2121,7 +2137,7 @@ color:wheat;</string>
          <property name="geometry">
           <rect>
            <x>50</x>
-           <y>120</y>
+           <y>99</y>
            <width>51</width>
            <height>16</height>
           </rect>
@@ -2140,7 +2156,7 @@ color:wheat;</string>
          <property name="geometry">
           <rect>
            <x>150</x>
-           <y>60</y>
+           <y>39</y>
            <width>151</width>
            <height>31</height>
           </rect>
@@ -2150,7 +2166,7 @@ color:wheat;</string>
          <property name="geometry">
           <rect>
            <x>130</x>
-           <y>111</y>
+           <y>90</y>
            <width>151</width>
            <height>31</height>
           </rect>
@@ -2160,7 +2176,7 @@ color:wheat;</string>
          <property name="geometry">
           <rect>
            <x>90</x>
-           <y>290</y>
+           <y>320</y>
            <width>141</width>
            <height>51</height>
           </rect>
@@ -2181,11 +2197,78 @@ color:wheat;</string>
         <widget class="QDateEdit" name="move_in">
          <property name="geometry">
           <rect>
-           <x>140</x>
-           <y>161</y>
+           <x>130</x>
+           <y>141</y>
            <width>131</width>
            <height>31</height>
           </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_20">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>200</y>
+           <width>111</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Room number</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="payement_history">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>280</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="placeholderText">
+          <string>[&quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;]</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_23">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>240</y>
+           <width>311</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Did he/She pay for the past 6months or?</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="spinBox">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>200</y>
+           <width>91</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <bold>true</bold>
+          </font>
          </property>
         </widget>
        </widget>
@@ -2249,24 +2332,11 @@ color:wheat;</string>
           <string>Email</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="email_2">
-         <property name="geometry">
-          <rect>
-           <x>100</x>
-           <y>80</y>
-           <width>151</width>
-           <height>31</height>
-          </rect>
-         </property>
-         <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
-         </property>
-        </widget>
         <widget class="QPushButton" name="loginBtn">
          <property name="geometry">
           <rect>
            <x>100</x>
-           <y>140</y>
+           <y>120</y>
            <width>101</width>
            <height>41</height>
           </rect>
@@ -2291,7 +2361,7 @@ color:wheat;</string>
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>249</y>
+           <y>229</y>
            <width>51</width>
            <height>16</height>
           </rect>
@@ -2313,7 +2383,7 @@ color:wheat;</string>
          <property name="geometry">
           <rect>
            <x>100</x>
-           <y>190</y>
+           <y>170</y>
            <width>151</width>
            <height>31</height>
           </rect>
@@ -2326,7 +2396,7 @@ color:wheat;</string>
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>200</y>
+           <y>180</y>
            <width>81</width>
            <height>16</height>
           </rect>
@@ -2348,7 +2418,7 @@ color:wheat;</string>
          <property name="geometry">
           <rect>
            <x>100</x>
-           <y>240</y>
+           <y>220</y>
            <width>151</width>
            <height>31</height>
           </rect>
@@ -2360,9 +2430,9 @@ color:wheat;</string>
          </property>
          <property name="geometry">
           <rect>
-           <x>110</x>
+           <x>100</x>
            <y>340</y>
-           <width>121</width>
+           <width>131</width>
            <height>41</height>
           </rect>
          </property>
@@ -2382,25 +2452,12 @@ color:wheat;</string>
           <string>Save changes</string>
          </property>
         </widget>
-        <widget class="QDateEdit" name="move_in_2">
-         <property name="enabled">
-          <bool>false</bool>
-         </property>
+        <widget class="QLabel" name="label_27">
          <property name="geometry">
           <rect>
-           <x>100</x>
-           <y>290</y>
-           <width>131</width>
-           <height>31</height>
-          </rect>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_16">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>284</y>
-           <width>81</width>
+           <x>20</x>
+           <y>260</y>
+           <width>301</width>
            <height>31</height>
           </rect>
          </property>
@@ -2411,7 +2468,33 @@ color:wheat;</string>
           </font>
          </property>
          <property name="text">
-          <string>Move in</string>
+          <string>Did he/She pay for the past 6months or?</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="payement_history_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>300</y>
+           <width>211</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="placeholderText">
+          <string>[&quot;Yes&quot;, &quot;No&quot;, &quot;Yes&quot;, &quot;Yes&quot;, &quot;No&quot;, &quot;Yes&quot;]</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="email_2">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>80</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
          </property>
         </widget>
        </widget>
@@ -2737,7 +2820,7 @@ background-color:white;
  <resources>
   <include location="icons.qrc"/>
   <include location="icons.qrc"/>
-  <include location="../Library-LMS/icons.qrc"/>
+  <include location="icons.qrc"/>
  </resources>
  <connections/>
 </ui>

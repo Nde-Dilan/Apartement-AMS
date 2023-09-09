@@ -7,7 +7,8 @@ pass_key = "auavzkcycnhdmjmk"
 #TODO :Create a button to open a matplotlib graph out of the pyqt5 app
 # TODO: Reliability of a client
 #TODO :add a new tenant, make the combo box of the status readonly
-#TODO : Click on one room open the second tab with all the info of that room
+#TODO :Update/remove a tenant, Add an icon to the app and the email of the teacher to the combo box
+#TODO : Add the school icon and my name on the login page
 #TODO: Clean the code
 from login import main_login, toggle_theme
 
@@ -202,22 +203,27 @@ class MainApp(QMainWindow, ui):
 
         username = self.username.text()
         email = self.email.text()
+        payement_history = self.payement_history.text()
         move_in = self.move_in.date().toString("yyyy-MM-dd")
+        room_id = self.spinBox.value()
 
         tenant = self.cursor.execute('''
-                       SELECT * FROM tenants WHERE name = (%s)
-                       ''', (username,))
+                       SELECT * FROM tenants WHERE name = (%s) AND email=(%s) and room_id =(%s)
+                       ''', (username,email,room_id))
         # print(tenant)
 
         if tenant:
             # open a dialog box to say that the username is already taken
-            pass
+            QMessageBox.warning(self, "Info", "The user has been already added! \n Please try another username.", QMessageBox.Ok)
+
+        elif username==" " or email==" " or not room_id or not payement_history:
+            QMessageBox.warning(self, "Info", "Don't play with me and fill all those fields!", QMessageBox.Ok)
         else:
             if username and email :
                 self.cursor.execute('''
-                            INSERT INTO tenants (name, email, move_in)
-                            VALUES (%s, %s, %s)
-                            ''', (username, email, move_in))
+                            INSERT INTO tenants (name, email, move_in, room_id, payement_history)
+                            VALUES (%s, %s, %s, %s, %s)
+                            ''', (username, email, move_in, room_id, payement_history))
                 self.db.commit()
                 self.db.close()
                 QMessageBox.information(self, "Info", "The user has been added successfully!", QMessageBox.Ok)
@@ -265,20 +271,20 @@ class MainApp(QMainWindow, ui):
         email = self.email_2.text()
 
         self.cursor.execute('''
-                               SELECT * FROM tenants WHERE username = (%s) AND email= (%s)
+                               SELECT * FROM tenants WHERE name = (%s) AND email= (%s)
                                ''', (username, email,))
         tenant = self.cursor.fetchone()
         #print(user)
         if tenant:
-            change_visibility = [self.username3, self.email_3, self.move_in_3,
-                                 self.saveChangesUser]
+            change_visibility = [self.username3, self.email_3,
+                                 self.saveChangesUser,self.payement_history_2]
 
             for obj in change_visibility:
                 obj.setEnabled(True)
 
             self.username3.setText(tenant[1])
             self.email_3.setText(tenant[2])
-            self.move_in.setText(tenant[3])
+            self.payement_history_2.setText(tenant[5])
         else:
             print("Please don't create problem")
 
@@ -288,21 +294,24 @@ class MainApp(QMainWindow, ui):
 
         new_username = self.username3.text()
         new_email = self.email_3.text()
-        new_move_in = move_in.date().toString("yyyy-MM-dd")
+        # new_move_in = move_in.date().toString("yyyy-MM-dd")
+        payement_history_2 = self.payement_history_2.text()
         # date.fromString(date_string, "yyyy-MM-dd")
 
 
         username = self.username2.text()
         email = self.email.text()
-        update_query = '''UPDATE users
-                          SET username = %s , email=%s, move_in= %s,
-                          WHERE username = %s'''
+        update_query = '''UPDATE tenants
+                          SET name = %s , email=%s, payement_history= %s
+                          WHERE name = %s'''
 
-        if new_username and new_email and new_move_in:
-            self.cursor.execute(update_query, (new_username, new_email, new_move_in, username,))
+        if new_username and new_email and payement_history_2:
+            print("Here-------------------->")
+            print(username,new_username,new_email,payement_history_2)
+            self.cursor.execute(update_query, (new_username, new_email, payement_history_2, username,))
             self.db.commit()
             self.db.close()
-            change_visibility = [self.username3, self.email_3, self.move_in_3,
+            change_visibility = [self.username3, self.email_3, self.payement_history_2,
                                  self.saveChangesUser]
 
             for obj in change_visibility:
@@ -326,8 +335,8 @@ def main():
 
 
 if __name__ == '__main__':
-    # login_=main_login()
-    if True:
+    login_=main_login()
+    if login_:
         main()
     else:
         pass
